@@ -39,16 +39,16 @@ module IntuitOAuth
         end
 
         oauth1_tokens = {
-          consumer_key: consumer_key,
-          consumer_secret: consumer_secret,
-          access_token: access_token,
-          access_secret: access_secret
+          'consumer_key' => consumer_key,
+          'consumer_secret' => consumer_secret,
+          'access_token' => access_token,
+          'access_secret' => access_secret
         }
         oauth1_header = IntuitOAuth::Utils.get_oauth1_header('POST', migration_endpoint, oauth1_tokens)
         headers = {
-          :'Content-Type' => 'application/json',
-          Accept: 'application/json',
-          Authorization: oauth1_header
+          'Content-Type' => 'application/json',
+          'Accept' => 'application/json',
+          'Authorization' => oauth1_header
         }
 
         body = {
