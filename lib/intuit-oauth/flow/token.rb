@@ -35,7 +35,7 @@ module IntuitOAuth
 
         headers = {
           Accept: 'application/json',
-          "Content-Type": 'application/x-www-form-urlencoded',
+          :"Content-Type" => 'application/x-www-form-urlencoded',
           Authorization: IntuitOAuth::Utils.get_auth_header(@client.id, @client.secret)
         }
 
@@ -54,7 +54,7 @@ module IntuitOAuth
       # @return [AccessToken] the AccessToken
       def refresh_tokens(token)
         headers = {
-          "Content-Type": 'application/x-www-form-urlencoded',
+          :"Content-Type" => 'application/x-www-form-urlencoded',
           Authorization: IntuitOAuth::Utils.get_auth_header(@client.id, @client.secret)
         }
 
@@ -72,7 +72,7 @@ module IntuitOAuth
       # @return [boolean] True if successfully revoked. False otherwise
       def revoke_tokens(token)
         headers = {
-          "Content-Type": 'application/json',
+          :"Content-Type" => 'application/json',
           Authorization: IntuitOAuth::Utils.get_auth_header(@client.id, @client.secret)
         }
 

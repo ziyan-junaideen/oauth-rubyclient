@@ -26,7 +26,7 @@ module IntuitOAuth
       uri = URI(url)
 
       user_agent_header = {
-        'User-Agent': IntuitOAuth::Version::USER_AGENT
+        :'User-Agent' => IntuitOAuth::Version::USER_AGENT
       }
       req_headers = headers.nil? ? user_agent_header : user_agent_header.merge!(headers)
 
