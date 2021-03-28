@@ -4,10 +4,6 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
-  spec.add_dependency 'httparty', '>= 0.16.3'
-  spec.add_dependency 'json', '>= 1.8.0'
-  spec.add_dependency 'rsa-pem-from-mod-exp', '~> 0.1.0'
-
   spec.authors       = ['Intuit Inc']
   spec.description   = 'A Ruby wrapper Intuit\'s OAuth and OpenID implementation.'
   spec.email         = ['idgsdk@intuit.com']
@@ -25,6 +21,10 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(bin|test|spec|features)/})
   end
+
+  spec.add_dependency 'httparty', '~> 0.15.4'
+  spec.add_dependency 'json', '~> 2.1.0'
+  spec.add_dependency 'rsa-pem-from-mod-exp', '~> 0.1.0'
 
   spec.add_development_dependency 'addressable', '~> 2.3'
   spec.add_development_dependency 'backports', '~> 3.11'
