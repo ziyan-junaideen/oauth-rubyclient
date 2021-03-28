@@ -28,9 +28,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  httparty
+  httparty (~> 0.15)
   json
   rspec
 
 BUNDLED WITH
-   1.16.2
+   1.17.3
