@@ -2,4 +2,4 @@ source 'https://rubygems.org'
 
 gem 'rspec'
 gem 'json'
-gem 'httparty'
+gem 'httparty', '~> 0.15'
